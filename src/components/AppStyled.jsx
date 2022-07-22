@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { centerBlock, font, widthHeight } from '../style/mixins';
+import { font, widthHeight } from '../style/mixins';
 
 export const Container = styled.div`
   padding: 40px 30px;
