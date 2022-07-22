@@ -10,7 +10,7 @@ export const Item = styled.li`
 `;
 
 export const DelButton = styled.button`
-  margin-left: 15px;
+  border-radius: 2px;
   background-color: ${props => props.theme.colors.buttonBg};
 
   &:hover {

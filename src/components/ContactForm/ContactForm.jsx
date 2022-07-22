@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Formik, ErrorMessage } from 'formik';
+import { Formik } from 'formik';
 import { nanoid } from 'nanoid';
 import propTypes from 'prop-types';
+import { AddButton } from './ContactFormStyled';
 
 const initialValues = {
   name: '',
@@ -37,7 +38,7 @@ export class ContactForm extends Component {
             required
           />
 
-          <button type="submit">Add contact</button>
+          <AddButton type="submit">Add contact</AddButton>
         </form>
       </Formik>
     );
