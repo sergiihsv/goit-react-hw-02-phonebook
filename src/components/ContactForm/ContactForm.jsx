@@ -16,7 +16,6 @@ export class ContactForm extends Component {
     const contact = { id: nanoid(), name, number };
     this.props.onSubmit(contact);
     resetForm();
-    console.log(nameInContacts);
   };
 
   render() {
