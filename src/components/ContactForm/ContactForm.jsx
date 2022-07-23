@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Formik, Form, Field } from 'formik';
+import { Formik } from 'formik';
 import { nanoid } from 'nanoid';
 import propTypes from 'prop-types';
-import { AddButton } from './ContactFormStyled';
+import { MainForm, AddButton, FormLabel, Input } from './ContactFormStyled';
 
 export class ContactForm extends Component {
   handleSubmit = ({ name, number }, { resetForm }) => {
@@ -25,11 +25,11 @@ export class ContactForm extends Component {
         initialValues={{ name: '', number: '' }}
         onSubmit={this.handleSubmit}
       >
-        <Form autoComplete="off">
+        <MainForm autoComplete="off">
           <div>
-            <label htmlFor="name">Name</label>
+            <FormLabel htmlFor="name">Name</FormLabel>
             <div>
-              <Field
+              <Input
                 type="text"
                 name="name"
                 pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -39,9 +39,9 @@ export class ContactForm extends Component {
             </div>
           </div>
           <div>
-            <label htmlFor="number">Number</label>
+            <FormLabel htmlFor="number">Number</FormLabel>
             <div>
-              <Field
+              <Input
                 type="tel"
                 name="number"
                 pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -51,7 +51,7 @@ export class ContactForm extends Component {
             </div>
           </div>
           <AddButton type="submit">Add contact</AddButton>
-        </Form>
+        </MainForm>
       </Formik>
     );
   }

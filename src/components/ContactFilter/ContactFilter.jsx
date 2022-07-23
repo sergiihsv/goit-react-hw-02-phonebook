@@ -1,5 +1,7 @@
 import { Component } from 'react';
 import propTypes from 'prop-types';
+import { FilterBox, FilterInput } from './ContactFilterStyled';
+import { FormLabel } from '../ContactForm/ContactFormStyled';
 
 export class ContactFilter extends Component {
   handleChange = ({ target: { value } }) => {
@@ -8,12 +10,16 @@ export class ContactFilter extends Component {
 
   render() {
     return (
-      <div>
-        <label htmlFor="filter">Find contacts by name</label>
+      <FilterBox>
+        <FormLabel htmlFor="filter">Find contacts by name</FormLabel>
         <div>
-          <input name="filter" type="filter" onChange={this.handleChange} />
+          <FilterInput
+            name="filter"
+            type="filter"
+            onChange={this.handleChange}
+          />
         </div>
-      </div>
+      </FilterBox>
     );
   }
 }

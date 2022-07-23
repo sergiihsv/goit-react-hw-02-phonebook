@@ -11,8 +11,7 @@ export const Item = styled.li`
 
 export const DelButton = styled.button`
   border-radius: 2px;
-
-  background-color: ${props => props.theme.colors.buttonBg};
+  background-color: ${props => props.theme.colors.colorBg};
 
   &:hover {
     box-shadow: -2px -2px 5px ${props => props.theme.colors.white},
