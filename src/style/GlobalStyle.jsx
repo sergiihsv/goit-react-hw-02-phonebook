@@ -42,7 +42,7 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
-/* ul */ol {
+ul  {
   list-style: none;
 }
 a {

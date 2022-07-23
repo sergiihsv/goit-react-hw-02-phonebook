@@ -4,8 +4,6 @@ import { ContactList } from './ContactList/ContactList';
 import { ContactFilter } from './ContactFilter/ContactFilter';
 import { Container, TitlePhoneBook, TitleContacts } from './AppStyled';
 
-
-
 export class App extends Component {
   state = {
     contacts: [

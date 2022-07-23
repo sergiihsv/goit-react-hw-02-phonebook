@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import { font, widthHeight } from '../style/mixins';
+import { centerBlock, font, widthHeight } from '../style/mixins';
 
 export const Container = styled.div`
   padding: 40px 30px;
+  ${centerBlock};
   max-width: 480px;
   border-radius: 20px;
   background-color: ${props => props.theme.colors.colorBg};

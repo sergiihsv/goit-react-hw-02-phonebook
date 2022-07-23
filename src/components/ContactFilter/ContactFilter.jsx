@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import propTypes from 'prop-types';
 
 export class ContactFilter extends Component {
   handleChange = ({ target: { value } }) => {
@@ -16,3 +17,7 @@ export class ContactFilter extends Component {
     );
   }
 }
+
+ContactFilter.propTypes = {
+  onChange: propTypes.func.isRequired,
+};

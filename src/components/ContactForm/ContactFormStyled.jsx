@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const AddButton = styled.button`
   border-radius: 2px;
+  margin-top: 20px;
   background-color: ${props => props.theme.colors.buttonBg};
   color: ${props => props.theme.colors.buttonText};
   box-shadow: -1px -1px 5px ${props => props.theme.colors.white},

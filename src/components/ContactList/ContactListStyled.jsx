@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { font } from '../../mainstyle/mixins';
+import { font } from '../../style/mixins';
 
 export const List = styled.ol`
   padding: 20px;
