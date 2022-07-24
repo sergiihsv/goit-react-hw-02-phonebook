@@ -22,9 +22,9 @@ export class App extends Component {
     });
   };
 
-  onFilterChange = filter => {
-    this.setState(prevState => {
-      return { ...prevState, filter: filter };
+  onFilter = e => {
+    this.setState({
+      filter: e.target.value,
     });
   };
 
@@ -59,7 +59,7 @@ export class App extends Component {
         <TitlePhoneBook>Phonebook</TitlePhoneBook>
         <ContactForm onSubmit={this.onformSubmit} contacts={contacts} />
         <TitleContacts>Contacts</TitleContacts>
-        <ContactFilter onChange={this.onFilterChange} />
+        <ContactFilter onFilter={this.onFilter} filter={filter} />
         <ContactList
           contacts={contacts}
           filter={filter}
